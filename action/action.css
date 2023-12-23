@@ -163,7 +163,7 @@ nav .wrapper{
   top: 10px;
 }
 
-@media :only screen and (max-width: 600px) {
+@media :only screen and (max-width: 970px) {
   .wrapper .btn{
     display: block;
   }
@@ -309,7 +309,7 @@ nav input{
   color: #666;
 }   
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 970px) {
   body {
     font-size: 14px;
   }
