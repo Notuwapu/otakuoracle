@@ -308,4 +308,23 @@ nav input{
 .containerTextCard p {
   color: #666;
 }   
+@media only screen and (max-width: 970px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 100%;
+  }
+  .anime-card{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .anime-card img{
+    order: -1;
+    text-align: center;
+    width: 100%;
+  }
+}
 
