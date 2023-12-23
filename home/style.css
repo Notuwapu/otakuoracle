@@ -163,136 +163,108 @@ nav .wrapper{
   top: 10px;
 }
 
-@media screen and (max-width: 970px) {
-  .wrapper .btn{
-    display: block;
+@media :only screen and (max-width: 970px) {
+    .wrapper .btn{
+      display: block;
+    }
+    .profile {
+      width: 50px; /* Sesuaikan ukuran gambar profil untuk perangkat seluler */
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      top: 0;
+      left: -100%;
+      background: #242526;
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+      margin: 0;
+    }
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #242526;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3A3B3C;
+    }
+    #menu-btn:checked ~ .nav-links{
+      left: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+  
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 20px;
+    }
+    .nav-links .drop-menu{
+      position: static;
+      opacity: 1;
+      top: 65px;
+      visibility: visible;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+  
+    .nav-links .desktop-item{
+      display: none;
+    }
+    .nav-links .mobile-item{
+      display: block;
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links .mobile-item:hover{
+      background: #3A3B3C;
+    }
+    .drop-menu li{
+      margin: 0;
+    }
+    .drop-menu li a{
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    .content .row .mega-links{
+      border-left: 0px;
+      padding-left: 15px;
+    }
+    .row .mega-links li{
+      margin: 0;
+    }
+    .content .row header{
+      font-size: 19px;
+    }
+  
   }
-  .wrapper .nav-links{
-    position: fixed;
-    height: auto;
-    width: 100%;
-    max-width: 350px;
-    top: 0;
-    left: -100%;
-    background: #242526;
-    display: block;
-    padding: 50px 10px;
-    line-height: 50px;
-    overflow-y: auto;
-    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
-    transition: all 0.3s ease;
-    margin: 0;
-  }
-  /* custom scroll bar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #242526;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #3A3B3C;
-  }
-  #menu-btn:checked ~ .nav-links{
-    left: 0%;
-  }
-  #menu-btn:checked ~ .btn.menu-btn{
+  nav input{
     display: none;
   }
-  #close-btn:checked ~ .btn.menu-btn{
-    display: block;
-  }
-
-  .nav-links li{
-    margin: 15px 10px;
-  }
-  .nav-links li a{
-    padding: 0 20px;
-    display: block;
-    font-size: 20px;
-  }
-  .nav-links .drop-menu{
-    position: static;
-    opacity: 1;
-    top: 65px;
-    visibility: visible;
-    padding-left: 20px;
-    width: 100%;
-    max-height: 0px;
-    overflow: hidden;
-    box-shadow: none;
-    transition: all 0.3s ease;
-  }
-
-  .nav-links .desktop-item{
-    display: none;
-  }
-  .nav-links .mobile-item{
-    display: block;
-    color: #f2f2f2;
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  .nav-links .mobile-item:hover{
-    background: #3A3B3C;
-  }
-  .drop-menu li{
-    margin: 0;
-  }
-  .drop-menu li a{
-    border-radius: 5px;
-    font-size: 18px;
-  }
-
-  .sub-item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 0.725rem;
-    cursor: pointer;
-    padding: 0.5rem 1.5rem;
-  }
-  
-  .sub-item:hover {
-    background-color: rgba(232, 232, 232, 0.4);
-  }
-  
-  .sub-item:hover .material-icons-outlined {
-    color: #ff9800;
-    transform: scale(1.08) translateY(-2px);
-    cursor: pointer;
-  }
-  
-  .sub-item:hover p {
-    color: #000;
-    cursor: pointer;
-  }
-  
-  .sub-item p {
-    font-size: 0.85rem;
-    color: #888888;
-    font-weight: 500;
-    margin: 0.4rem 0;
-    flex: 1;
-  }
-  .content .row .mega-links{
-    border-left: 0px;
-    padding-left: 15px;
-  }
-  .row .mega-links li{
-    margin: 0;
-  }
-  .content .row header{
-    font-size: 19px;
-  }
-}
-nav input{
-  display: none;
-}
 
 .body-text{
   position: absolute;
@@ -557,4 +529,126 @@ nav input{
 .Genre .btn-genre:hover{
     background: rgb(198, 133, 133);
     color: maroon;
+}
+
+/* Media query for smaller screens (e.g., smartphones) */
+@media only screen and (max-width: 1200px) {
+    .body-text div {
+        font-size: 30px;
+    }
+
+    .home {
+        display: block;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .content-left {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content .content-left .home-text {
+        margin-left: 0;
+    }
+
+    .content .content-right {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .about {
+        padding: 50px 10px;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about .about-content .about-img img {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .about .about-content .about-text h2 {
+        font-size: 35px;
+        top: 0;
+    }
+
+    .about .about-content .about-text span {
+        font-size: 35px;
+    }
+
+    .about .about-content .about-text h4 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .about .about-content .about-text p {
+        width: 100%;
+        text-align: justify;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about .btn-box {
+        font-size: 18px;
+    }
+
+    .Genre h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .Genre .Genre-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    .Genre .Genre-container .box {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+    }
+
+    .Genre .Genre-container .box h3 {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .Genre .Genre-container .box p {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .Genre .bawah {
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .Genre .btn-genre {
+        font-size: 10px;
+        width: 100%;
+    }
 }
